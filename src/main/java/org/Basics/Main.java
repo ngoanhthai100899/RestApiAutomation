@@ -30,9 +30,10 @@ public class Main {
         String placeID = js.getString("place_id");
         System.out.println(placeID);
 
-        //Add place -> Update Place with New Address -> Get Place to validate if New Address is present in response
-
-        //Update Place
+        /*
+        Add place -> Update Place with New Address -> Get Place to validate if New Address is present in response
+        Update Place
+        */
         String newAddress = "90 Trinh Dinh Cuu 2";
         given().log().all().queryParam("key", "qaclick123").header("Content-Type", "application/json")
                 .body(String.format("""
