@@ -5,7 +5,6 @@ import io.restassured.path.json.JsonPath;
 import org.files.Payload;
 import org.files.ReUsableMethods;
 import org.testng.Assert;
-
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 

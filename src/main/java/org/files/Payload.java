@@ -20,4 +20,46 @@ public class Payload {
                     "language": "French-IN"
                 }""";
     }
+
+    public static String CoursePrice() {
+        return """
+                {
+                  "dashboard": {
+                    "purchaseAmount": 1162,
+                    "website": "rahulshettyacademy.com"
+                  },
+                  "courses": [
+                    {
+                      "title": "Selenium Python",
+                      "price": 50,
+                      "copies": 6
+                    },
+                    {
+                      "title": "Cypress",
+                      "price": 40,
+                      "copies": 4
+                    },
+                    {
+                      "title": "RPA",
+                      "price": 45,
+                      "copies": 10
+                    },
+                    {
+                      "title": "Appium",
+                      "price": 36,
+                      "copies": 7
+                    }
+                  ]
+                }""";
+    }
+
+    public static String AddBook(String isbn, String aisle) {
+        return String.format("""
+                {
+                    "name": "Kamasutra",
+                    "isbn": "%s",
+                    "aisle": "%s",
+                    "author": "John foer"
+                }""", isbn, aisle);
+    }
 }
