@@ -56,10 +56,10 @@ public class Payload {
     public static String AddBook(String isbn, String aisle) {
         return String.format("""
                 {
-                    "name": "Kamasutra",
+                    "name": "Amaterasu",
                     "isbn": "%s",
                     "aisle": "%s",
-                    "author": "John foer"
+                    "author": "John for"
                 }""", isbn, aisle);
     }
 }

@@ -1,14 +1,13 @@
 package org.Basics;
 
-import groovy.json.JsonParser;
 import io.restassured.path.json.JsonPath;
 import org.files.Payload;
+import org.files.ReUsableMethods;
 import org.testng.Assert;
 
 public class ComplexJsonParse {
     public static void main(String[] args) {
-        JsonPath js = new JsonPath(Payload.CoursePrice());
-
+        JsonPath js = ReUsableMethods.rawToJson(Payload.CoursePrice());
         System.out.println("//Print number of courses returned by API");
         int count = js.getInt("courses.size()");
         System.out.println(count);

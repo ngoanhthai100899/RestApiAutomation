@@ -2,13 +2,14 @@ package org.Basics;
 
 import io.restassured.path.json.JsonPath;
 import org.files.Payload;
+import org.files.ReUsableMethods;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class SumValidation {
     @Test
     public void sumOfCourses(){
-        JsonPath js = new JsonPath(Payload.CoursePrice());
+        JsonPath js = ReUsableMethods.rawToJson(Payload.CoursePrice());
         int count = js.getInt("courses.size()");
         int sum = 0;
         System.out.println("//Verify if Sum of all course prices matches with purchaseAmount");
